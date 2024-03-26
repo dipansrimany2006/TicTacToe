@@ -1,8 +1,8 @@
 let boxes= document.querySelectorAll(".box");
 let body = document.querySelector("body");
-let audioturn= new Audio("mixkit-arcade-game-jump-coin-216.wav");
-let gamewinsound = new Audio("mixkit-ethereal-fairy-win-sound-2019.wav");
-let gamedrawsound = new Audio("mixkit-video-game-win-2016.wav");
+let audioturn= new Audio("/assets/mixkit-arcade-game-jump-coin-216.wav");
+let gamewinsound = new Audio("/assets/mixkit-ethereal-fairy-win-sound-2019.wav");
+let gamedrawsound = new Audio("/assets/mixkit-video-game-win-2016.wav");
 let winimg = document.querySelector(".winimg");
 let turn=true;
 let count =0;
