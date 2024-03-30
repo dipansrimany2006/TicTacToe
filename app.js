@@ -10,6 +10,10 @@ let turn = true;
 let count = 0;
 let msg = document.querySelector(".msg");
 let drawgame=false;
+let scorex = document.querySelector("#scorex");
+let scoreo = document.querySelector("#scoreo");
+let xwin=0;
+let owin=0;
 const winPatterns = [
   [0, 1, 2],
   [0, 3, 6],
@@ -62,7 +66,7 @@ const game = () => {
 const reset = ()=>{
     
     boxes.forEach((box)=> {
-        console.log(box);
+        // console.log(box);
         box.classList.remove("x");
         box.classList.remove("o");
         box.innerHTML="";
@@ -98,9 +102,16 @@ const checkWinner = () => {
         turnX.classList.add("hide");
         turnO.classList.add("hide");
         msg.innerHTML = `Congratulation! Winner is ${pos1}`;
+        if(pos1==="X"){
+          scorex.innerHTML= ++xwin;
+        }else{
+          scoreo.innerHTML= ++owin;
+        }
         gamewinsound.play();
         winimg.classList.remove("hide");
+        
         setTimeout(reset, 4000);
+        
         return true;
       }
     }
